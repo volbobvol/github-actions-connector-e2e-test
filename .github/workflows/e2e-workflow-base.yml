@@ -1,0 +1,31 @@
+name: e2e workflow base
+
+on:
+  workflow_call:
+    secrets:
+      SIGNPATH_API_TOKEN:
+        required: true
+      SIGNPATH_TOKEN_ENCRYPTION_KEY:
+        required: true
+    inputs:
+      workflow-dispatch-event-id:
+        required: true
+        type: string
+      environment:
+          required: true
+          type: string
+jobs:
+  log-event-id:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - run: |
+          echo "E2E test identifier: ${{ inputs.workflow-dispatch-event-id }}"
+      # run powersell script
+      - shell: pwsh
+        run: |
+          $tokenBytes = [System.Text.Encoding]::UTF8.GetBytes("${{ secrets.SIGNPATH_API_TOKEN }}")
+          $rsa = New-Object System.Security.Cryptography.RSACryptoServiceProvider
+          $rsa.FromXmlString("${{ secrets.SIGNPATH_TOKEN_ENCRYPTION_KEY }}")
+          $encryptedTokenBytes = $rsa.Encrypt($tokenBytes, $false)
+          echo "Encrypted SignPath token: $([System.Convert]::ToBase64String($encryptedTokenBytes))"
