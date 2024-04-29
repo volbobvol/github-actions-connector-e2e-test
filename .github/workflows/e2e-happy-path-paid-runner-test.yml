@@ -45,6 +45,6 @@ jobs:
             artifact-configuration-slug: exe-in-zip
             github-artifact-name: original-artifact
             github-token: '${{ secrets.GITHUB_TOKEN }}'
-            github-extended-verification-token: '${{ secrets.GITHUB_EXTENDED_VERIFICATION_TOKEN }}'
+            github-extended-verification-token: '${{ secrets.EXTENDED_VERIFICATION_TOKEN }}'
             wait-for-completion: true
             output-artifact-directory: signed-artifact
