@@ -1,4 +1,4 @@
-name: e2e happy path paid runner tests
+name: e2e validator detects self-hosted runner
 
 on:
     workflow_dispatch:
