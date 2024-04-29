@@ -1,4 +1,4 @@
-name: e2e happy path tests
+name: e2e happy path paid runner tests
 
 on:
     workflow_dispatch:
