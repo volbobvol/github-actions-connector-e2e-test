@@ -44,5 +44,4 @@ jobs:
             signing-policy-slug: e2e-test-sp
             artifact-configuration-slug: exe-in-zip
             github-artifact-name: original-artifact
-            github-token: '${{ secrets.GITHUB_TOKEN }}'
             github-extended-verification-token: '${{ secrets.EXTENDED_VERIFICATION_TOKEN }}'
