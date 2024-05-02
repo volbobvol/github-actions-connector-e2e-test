@@ -19,9 +19,6 @@ jobs:
       workflow-dispatch-event-id: ${{ inputs.workflow-dispatch-event-id }}
       environment: ${{ inputs.environment }}
   build:
-    permissions:
-      actions: read  # get run data
-      contents: read  # do checkout
     runs-on: e2e-self-hosted
     environment: ${{ inputs.environment }}
     steps:
