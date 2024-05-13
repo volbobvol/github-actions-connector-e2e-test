@@ -42,7 +42,10 @@ jobs:
             artifact-configuration-slug: exe-in-zip
             github-artifact-name: original-artifact
             wait-for-completion: true
-            output-artifact-directory: signed-artifact
+            output-artifact-directory: signed-artifact,
+            parameters: |
+              param1: ${{ toJSON("value1") }}
+              param2: "value2"
       - name: Upload the signed artifact
         uses: actions/upload-artifact@v4
         with: 
