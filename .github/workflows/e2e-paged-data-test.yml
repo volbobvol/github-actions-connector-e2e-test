@@ -1,0 +1,278 @@
+name: e2e test paged data loading
+
+on:
+    workflow_dispatch:
+      inputs:
+        environment:
+          required: true
+          type: string
+        workflow-dispatch-event-id:
+          required: true
+          type: string
+jobs:
+  call-base-workflows:
+    uses: ./.github/workflows/e2e-workflow-base.yml
+    secrets:
+      SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}
+      SIGNPATH_TOKEN_ENCRYPTION_KEY: ${{ secrets.SIGNPATH_TOKEN_ENCRYPTION_KEY }}
+    with:
+      workflow-dispatch-event-id: ${{ inputs.workflow-dispatch-event-id }}
+      environment: ${{ inputs.environment }}
+  build:
+    runs-on: e2e-self-hosted
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact1
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact2
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact3
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact4
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact5
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact6
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact7
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact8
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact9
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact10
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact11
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact12
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact13
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact14
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact15
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact16
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact17
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact18
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact19
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact20
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact21
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact22
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact23
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact24
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact25
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact26
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact27
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact28
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact29
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact30
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact31
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact32
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact33
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact34
+          path: ./artifacts/small.exe
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact35
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact36
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact37
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact38
+          path: ./artifacts/small.exe
+  
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact39
+          path: ./artifacts/small.exe
+
+      - name: generate artifacts to test paged data loading
+        uses: actions/upload-artifact@v4
+        with: 
+          name: artifact40
+          path: ./artifacts/small.exe
+
+      # actual artifct
+      - name: Upload the artifcat file
+        uses: actions/upload-artifact@v4
+        with: 
+          name: original-artifact
+          path: ./artifacts/small.exe
+
+      - name: Run submit signing request
+        id: submit_with_download
+        uses: signpath/github-action-submit-signing-request@main
+        with:
+            connector-url: ${{ vars.CONNECTOR_URL }}
+            api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+            organization-id: ${{ vars.ORGANIZATION_ID }}
+            project-slug: e2e-gha-test-project
+            # this SigningPolicy has auto-approve enabled, so you don't need to approve the signing request
+            signing-policy-slug: e2e-test-sp
+            artifact-configuration-slug: exe-in-zip
+            github-artifact-name: original-artifact
+            github-extended-verification-token: '${{ secrets.EXTENDED_VERIFICATION_TOKEN }}'
