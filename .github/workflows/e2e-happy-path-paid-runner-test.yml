@@ -1,3 +1,5 @@
+# this workflow is used to test the happy path of the e2e tests using the paid runner
+# to make sure that we can distinguish between the paid and the default runner
 name: e2e happy path paid runner tests
 
 on:

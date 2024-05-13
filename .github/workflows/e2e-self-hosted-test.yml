@@ -1,3 +1,4 @@
+# this workflow is used to make sure that we can correctly detect a self-hosted runners
 name: e2e validator detects self-hosted runner
 
 on:

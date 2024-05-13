@@ -1,3 +1,5 @@
+# this workflow is intended to test the behavior of the system when a large artifact is submitted for signing
+# besides other aspects it helps to check signed artifacts downloading back to the runner
 name: e2e big exe tests
 
 on:

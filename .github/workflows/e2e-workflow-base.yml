@@ -1,3 +1,5 @@
+# this workflow is supposed to be reused by other workflows to make them compatible 
+# with the e2e tests 
 name: e2e workflow base
 
 on:

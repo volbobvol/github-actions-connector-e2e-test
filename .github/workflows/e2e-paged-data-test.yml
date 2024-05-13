@@ -1,3 +1,6 @@
+# this workflow is intended to test paged data support
+# here we create 40 artifacts and the 41st is the one which we sign
+# the default page size for artifacts is 30 so we should load 2 pages of artifacts
 name: e2e test paged data loading
 
 on:
