@@ -19,7 +19,7 @@ jobs:
       workflow-dispatch-event-id: ${{ inputs.workflow-dispatch-event-id }}
       environment: ${{ inputs.environment }}
   build:
-    runs-on: e2e-self-hosted
+    runs-on: windows-latest
     environment: ${{ inputs.environment }}
     steps:
       - name: Checkout
