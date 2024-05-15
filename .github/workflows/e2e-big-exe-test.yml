@@ -27,6 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Upload the artifcat file
+        id: upload-artifact-step
         uses: actions/upload-artifact@v4
         with: 
           name: original-artifact
@@ -42,6 +43,6 @@ jobs:
             # this SigningPolicy has auto-approve enabled, so you don't need to approve the signing request
             signing-policy-slug: e2e-test-sp
             artifact-configuration-slug: exe-in-zip
-            github-artifact-name: original-artifact
+            github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
             wait-for-completion: true
             output-artifact-directory: signed-artifact
