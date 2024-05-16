@@ -48,6 +48,9 @@ jobs:
             parameters: |
               param1: ${{ toJSON('value1') }}
               param2: "value2"
+      - name: List files in the repository
+        run: |
+            ls ${{ github.workspace }}
       - name: Upload the signed artifact
         id: upload-signed-artifact-step
         uses: actions/upload-artifact@v4
