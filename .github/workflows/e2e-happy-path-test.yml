@@ -44,18 +44,15 @@ jobs:
             artifact-configuration-slug: exe-in-zip
             github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
             wait-for-completion: true
-            output-artifact-directory: signed-artifact,
+            output-artifact-directory: signed-artifact
             parameters: |
               param1: ${{ toJSON('value1') }}
               param2: "value2"
-      - name: List files in the repository
-        run: |
-            ls ${{ github.workspace }} -Recurse
       - name: Upload the signed artifact
         id: upload-signed-artifact-step
         uses: actions/upload-artifact@v4
         with: 
             name: signed-artifact
-            path: 'signed-artifact/*.exe'
+            path: signed-artifact
       - run: |
           echo "Signed Artifact Id: ${{ steps.upload-signed-artifact-step.outputs.artifact-id }}"
