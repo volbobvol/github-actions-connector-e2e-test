@@ -50,7 +50,7 @@ jobs:
               param2: "value2"
       - name: List files in the repository
         run: |
-            ls ${{ github.workspace }}
+            ls ${{ github.workspace }} -Recurse
       - name: Upload the signed artifact
         id: upload-signed-artifact-step
         uses: actions/upload-artifact@v4
