@@ -20,7 +20,7 @@ jobs:
       workflow-dispatch-event-id: ${{ inputs.workflow-dispatch-event-id }}
       environment: ${{ inputs.environment }}
   always_queued:
-    runs-on: fake_lbl
+    runs-on: test-group-vb
     steps:
       - name: Checkout
         uses: actions/checkout@v3
