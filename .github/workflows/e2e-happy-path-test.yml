@@ -19,11 +19,6 @@ jobs:
     with:
       workflow-dispatch-event-id: ${{ inputs.workflow-dispatch-event-id }}
       environment: ${{ inputs.environment }}
-  always_queued:
-    runs-on: test-group-vb
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
   build:
     runs-on: windows-latest
     environment: ${{ inputs.environment }}
