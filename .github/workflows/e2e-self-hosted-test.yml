@@ -40,7 +40,7 @@ jobs:
             organization-id: ${{ vars.ORGANIZATION_ID }}
             project-slug: e2e-gha-test-project
             # this SigningPolicy has auto-approve enabled, so you don't need to approve the signing request
-            signing-policy-slug: e2e-test-sp
+            signing-policy-slug: e2e-gha-test-project-self-hosted
             artifact-configuration-slug: exe-in-zip
             github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
             github-extended-verification-token: '${{ secrets.EXTENDED_VERIFICATION_TOKEN }}'
