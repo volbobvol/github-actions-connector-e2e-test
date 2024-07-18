@@ -10,6 +10,10 @@ on:
         workflow-dispatch-event-id:
           required: true
           type: string
+        signing-policy-slug:
+          required: true
+          type: string
+          default: e2e-test-sp-code-scanning
 jobs:
   call-base-workflows:
     uses: ./.github/workflows/e2e-workflow-base.yml
@@ -40,7 +44,7 @@ jobs:
             organization-id: ${{ vars.ORGANIZATION_ID }}
             project-slug: e2e-gha-test-project
             # this SigningPolicy has auto-approve enabled, so you don't need to approve the signing request
-            signing-policy-slug: e2e-test-sp-code-scanning
+            signing-policy-slug: ${{ inputs.signing-policy-slug }}
             artifact-configuration-slug: exe-in-zip
             github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
             wait-for-completion: true
