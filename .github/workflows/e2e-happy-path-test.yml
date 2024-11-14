@@ -20,8 +20,7 @@ jobs:
       workflow-dispatch-event-id: ${{ inputs.workflow-dispatch-event-id }}
       environment: ${{ inputs.environment }}
   build:
-    # windows-latest
-    runs-on: label3
+    runs-on: windows-latest
     environment: ${{ inputs.environment }}
     steps:
       - name: Checkout
