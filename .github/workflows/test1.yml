@@ -1,5 +1,5 @@
 # this workflow is used to test the e2e happy path of the signpath/github-action-submit-signing-request action
-name: e2e happy path tests
+name: e2e happy path tests TEST
 
 on:
     workflow_dispatch:
